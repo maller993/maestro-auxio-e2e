@@ -1,0 +1,11 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Songs"
+- assertVisible: "Albums"
+- assertVisible: "Artists"
+- assertVisible: "Genres"
+- assertVisible: "Playlists"
+- assertVisible: "Your songs will show up here."
+- assertVisible: "Music sources"
