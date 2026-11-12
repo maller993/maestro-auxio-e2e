@@ -1,0 +1,24 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
+- tapOn: "Music sources"
+# Modo File picker (por defecto): sin carpetas, Save deshabilitado
+- assertVisible: "Folders to load"
+- assertVisible: "No folders"
+- assertVisible:
+    text: "Save"
+    enabled: false
+# Cambio a modo System
+- tapOn: "System"
+- assertVisible: ".*Android OS automatically detects.*"
+- assertNotVisible: "Folders to load"
+- assertVisible:
+    text: "Save"
+    enabled: true
+# Vuelta a File picker
+- tapOn: "File picker"
+- assertVisible: "Folders to load"
+- assertVisible: "No folders"
+- tapOn: "Cancel"
+- assertVisible: "Your songs will show up here."
