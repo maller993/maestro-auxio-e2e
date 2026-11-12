@@ -1,0 +1,15 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
+- tapOn: "Music sources"
+- assertVisible: "Load from"
+- assertVisible: "File picker"
+- assertVisible: "System"
+- assertVisible: "Folders to load"
+- assertVisible: "No folders"
+- assertVisible: "More settings"
+- assertVisible: "Cancel"
+- assertVisible: "Save"
+- tapOn: "Cancel"
+- assertVisible: "Your songs will show up here."
