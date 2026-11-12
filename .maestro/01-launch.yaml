@@ -1,0 +1,4 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
