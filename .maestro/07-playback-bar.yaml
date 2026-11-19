@@ -1,0 +1,17 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
+- runFlow: subflows/load-music-system.yaml
+# Antes de tocar nada, el mini reproductor no muestra la canción
+- assertNotVisible:
+    id: ".*:id/playback_song"
+# Al tocar la canción en la lista, aparece el mini reproductor
+- tapOn:
+    id: ".*:id/song_name"
+- assertVisible:
+    id: ".*:id/playback_song"
+    text: "2026-01-29_LostInTranslation"
+- assertVisible:
+    id: ".*:id/playback_play_pause"
+- assertVisible: "Skip to next song"
