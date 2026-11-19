@@ -1,0 +1,17 @@
+appId: org.oxycblt.auxio
+---
+- launchApp:
+    clearState: true
+- runFlow: subflows/load-music-system.yaml
+# Un archivo sin etiquetas se organiza con valores por defecto en cada pestaña
+- tapOn: "Albums"
+- assertVisible: "Music"
+- assertVisible: "Unknown artist"
+- tapOn: "Artists"
+- assertVisible: "Unknown artist"
+- assertVisible: "1 album • 1 song"
+- tapOn: "Genres"
+- assertVisible: "Unknown genre"
+- assertVisible: "1 artist • 1 song"
+- tapOn: "Songs"
+- assertVisible: "2026-01-29_LostInTranslation"

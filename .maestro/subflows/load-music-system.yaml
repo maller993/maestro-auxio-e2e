@@ -1,0 +1,9 @@
+appId: org.oxycblt.auxio
+---
+- tapOn: "Music sources"
+- tapOn: "System"
+- tapOn: "Save"
+# Android indexa en segundo plano: esperamos en lugar de asumir un tiempo fijo
+- extendedWaitUntil:
+    visible: "Unknown artist"
+    timeout: 10000

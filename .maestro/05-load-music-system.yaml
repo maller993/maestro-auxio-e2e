@@ -2,12 +2,6 @@ appId: org.oxycblt.auxio
 ---
 - launchApp:
     clearState: true
-- tapOn: "Music sources"
-- tapOn: "System"
-- tapOn: "Save"
-# Android indexa en segundo plano: esperamos en lugar de asumir un tiempo fijo
-- extendedWaitUntil:
-    visible: "Unknown artist"
-    timeout: 10000
+- runFlow: subflows/load-music-system.yaml
 - assertVisible: "2026-01-29_LostInTranslation"
 - assertNotVisible: "Your songs will show up here."
