@@ -5,5 +5,5 @@ appId: org.oxycblt.auxio
 - tapOn: "Save"
 # Android indexa en segundo plano: esperamos en lugar de asumir un tiempo fijo
 - extendedWaitUntil:
-    visible: "Unknown artist"
+    visible: "${EXPECTED_ARTIST}"
     timeout: 10000

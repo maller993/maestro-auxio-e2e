@@ -1,8 +1,12 @@
+# fixture: no-metadata
 appId: org.oxycblt.auxio
 ---
 - launchApp:
     clearState: true
-- runFlow: subflows/load-music-system.yaml
+- runFlow:
+    file: subflows/load-music-system.yaml
+    env:
+      EXPECTED_ARTIST: "Unknown artist"
 # Un archivo sin etiquetas se organiza con valores por defecto en cada pestaña
 - tapOn: "Albums"
 - assertVisible: "Music"
@@ -14,4 +18,4 @@ appId: org.oxycblt.auxio
 - assertVisible: "Unknown genre"
 - assertVisible: "1 artist • 1 song"
 - tapOn: "Songs"
-- assertVisible: "2026-01-29_LostInTranslation"
+- assertVisible: "no-metadata"

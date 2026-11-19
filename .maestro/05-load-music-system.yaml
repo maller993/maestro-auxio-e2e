@@ -1,7 +1,11 @@
+# fixture: no-metadata
 appId: org.oxycblt.auxio
 ---
 - launchApp:
     clearState: true
-- runFlow: subflows/load-music-system.yaml
-- assertVisible: "2026-01-29_LostInTranslation"
+- runFlow:
+    file: subflows/load-music-system.yaml
+    env:
+      EXPECTED_ARTIST: "Unknown artist"
+- assertVisible: "no-metadata"
 - assertNotVisible: "Your songs will show up here."
